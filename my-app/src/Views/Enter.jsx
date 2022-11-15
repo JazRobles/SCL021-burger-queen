@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../Assets/img/logo.png';
 import { useNavigate } from "react-router-dom";
+import './styles.css';
 
 
 const Enter = () => {
@@ -12,11 +13,12 @@ const Enter = () => {
           <img src={logo}  className="logo" alt="" />
           
         </header>
-       
-      <div>
-      <button onClick={() => navigate("/Menu")}>Mesero</button>
+    
+    
+      <div className='divibtn'>
+      <button className='btnmesero' onClick={() => navigate("/Menu")}>Mesero</button>
       <br></br>
-      <button>Cocinero</button>
+      <button className='btncocina'>Cocinero</button>
       </div>
          </>
         
