@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../Assets/img/logo.png';
+//import logo from '../Assets/img/logo.png';
 import { useNavigate } from "react-router-dom";
 import './styles.css';
 
@@ -10,7 +10,7 @@ const Enter = () => {
       
       <>
         <header>
-          <img src={logo}  className="logo" alt="" />
+         <img src='/Assets/img/logo.png'  className="logo" alt="" />
           
         </header>
     

@@ -1,33 +1,31 @@
-import React from 'react';
-import './styles.css';
-import image from '../Assets/img/burgerxx.png'
-import papas from '../Assets/img/papas.png'
-import { Link } from "react-router-dom";
-const Menu = () => {
-    return (
-      <>
-  
-      <Link to={image} className="btnLink">
-      <div className="divgurger">
-      <img src={image}  className="image" alt="" />
-      <div className='h3menu'><h3>Hamburguesa doble</h3>
+import React from "react";
+import "./styles.css";
+import Data from "../menu.json";
+import Card from "../components/Card";
+import Boton from "../components/Button";
+
+export default function Menu() {
+  return (
+    <>
+      <header>
+        <h1 className="tituloMenu">Menu</h1>
+      </header>
+      <div className="contenedor" style={{ display: "flex" }}>
+        <Card />
+        <div className="card-container">
+          {
+            Data.map((post) => {
+              return (
+                <div className="divgurger" key={post.id}>
+                  <img className="image" src={post.img} alt="" />
+                  <h3>{post.name}</h3>
+                  <p>${post.price}</p>
+                  <Boton />
+                </div>
+              );
+            })}
+        </div>
       </div>
-      </div>    
-      </Link> 
-   
-      <div className="div-papas">
-      <img src={papas}  className="img-papas" alt="" />
-      <div className='h3papas'><h3>Papas Fritas </h3>
-      </div>    
-       
-      </div>
-      
-    </>  
-
-    );
-  };
-
-
-  
-  
-  export default Menu;
+    </>
+  );
+}

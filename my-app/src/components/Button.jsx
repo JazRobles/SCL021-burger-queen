@@ -1,9 +1,18 @@
-import React from 'react' 
+import React,{useState} from 'react' 
+import '../Views/styles.css';
 
-const Button = () => {
+function Counter({initialCount}) {
+  const [count, setCount] = useState(initialCount);
   return (
-    <div>Button</div>
-  )
+    <>
+       {count}
+       <div className='divCount'>
+     
+      <button className='btnMenos' onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
+      <button className='btnMas' onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
+      </div>
+    </>
+  );
 }
 
-export default Button
+export default Counter;
