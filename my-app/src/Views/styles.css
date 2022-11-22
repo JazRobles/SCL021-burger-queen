@@ -19,7 +19,7 @@ code {
     
   width: 100%;
   height: 50%;
-
+display: flow-root;
   background-image: url("../../public/Assets/img/Fondog.png");
   
   background-repeat: no-repeat;
@@ -35,6 +35,22 @@ code {
   margin-left: 42%;
   margin-top: 6%;
 }
+
+.titulo-enter{
+  color: darkorange;
+display: flex;
+justify-content:center;
+font-style:italic;
+text-shadow: 2px 2px 4px #000000;
+}
+
+.subtitulo-enter{
+  color: darkorange;
+  display: flex;
+justify-content:center;
+text-shadow: 2px 2px 4px #000000;
+}
+
 
 .btnmesero {
   box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
@@ -56,9 +72,12 @@ code {
   font-size: large;
 }
 
-.divbtn {
+.div-btn {
   margin-right: 5%;
   margin-top: 6%;
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .image {
@@ -76,7 +95,7 @@ code {
 .card-container{
   display:flex;
   flex-wrap:wrap;
-  gap:20px;
+  /*gap:20px;*/
   justify-content: space-evenly;
 }
 
@@ -152,7 +171,7 @@ margin-top: 30%;
   width: 25vh;
 
   border-radius: 8px;
-  /* margin-left: 60%; */
+ 
   margin-top: 1%;
   background-color: aliceblue;
 }
@@ -206,6 +225,7 @@ margin-top: 30%;
   font-style: italic;
   height: 10vh;
   width: 10vh;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .divCount {

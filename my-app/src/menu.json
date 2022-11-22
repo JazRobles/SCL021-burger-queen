@@ -1,0 +1,52 @@
+[
+  {
+      
+      "id": "1",
+      "img": "/Assets/img/burgerxx.png",
+      "name": "Hamburguesa doble",
+      "price": 5000
+    },
+    {
+     
+      "id": "2",
+      "img": "/Assets/img/burger.png",
+      "name": "Hamburguesa sencilla",
+      "price": 4000
+    },
+    {
+      
+      "id": "3",
+      "img": "/Assets/img/papas.png",
+      "name": "Papas fritas",
+      "price": 3000
+    },
+    {
+      
+      "id": "4",
+      "img": "/Assets/img/agua.png",
+      "name": "Agua 500ml",
+      "price": 1500
+    },
+    {
+      
+      "id": "5",
+      "img": "/Assets/img/agua.png",
+      "name": "Agua 750ml",
+      "price": 2000
+    },
+    {
+      
+        "id": "5",
+        "img": "/Assets/img/bebida.png",
+        "name": "Bebida/gaseosa 750ml",
+        "price": 2000
+      },
+    {
+     
+      "id": "6",
+      "img": "/Assets/img/bebida.png",
+      "name": "Bebida/gaseosa 500ml",
+      "price": 1500
+    }
+
+  ]

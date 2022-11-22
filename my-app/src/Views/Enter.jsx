@@ -1,33 +1,26 @@
-import React from 'react';
-//import logo from '../Assets/img/logo.png';
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import './styles.css';
-
+import "./styles.css";
 
 const Enter = () => {
   const navigate = useNavigate();
-    return (
+  return (
+    <>
+      <header>
+        <img src="/Assets/img/logo.png" className="logo" alt="" />
+      </header>
       
-      <>
-        <header>
-         <img src='/Assets/img/logo.png'  className="logo" alt="" />
-          
-        </header>
-    
-    
-      <div className='divibtn'>
-      <button className='btnmesero' onClick={() => navigate("/Menu")}>Mesero</button>
-      <br></br>
-      <button className='btncocina'>Cocinero</button>
+      <div className="div-btn">
+      <h1 className="titulo-enter">Bienvenidos a Burger Queen</h1>
+           <h2 className="subtitulo-enter">Que sea un buen día</h2>
+        <button className="btnmesero" onClick={() => navigate("/Menu")}>
+          Mesero
+        </button>
+        <br></br>
+        <button className="btncocina">Cocinero</button>
       </div>
-         </>
-        
-         
+    </>
+  );
+};
 
-    );
-  };
-
-
-  
-  
-  export default Enter;
+export default Enter;
