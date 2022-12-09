@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Views/styles.css';
-import { Link } from "react-router-dom";
 
+import Contador from "../components/Contador";
 const Card = () => {
 return (
     <>
@@ -12,6 +12,7 @@ return (
        <textarea placeholder='Mesa y Extras' className='texArea'></textarea>
          <div className='divCentro'>
          <button className='btnEliminar'>Eliminar</button>
+         <Contador/>
          </div>
          <button className='btnCocinar'>Cocinar</button>
     </div>

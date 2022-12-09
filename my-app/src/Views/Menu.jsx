@@ -1,10 +1,15 @@
 import React from "react";
 import "./styles.css";
-import Data from "../menu.json";
+//import Data from "../menu.json";
 import Card from "../components/Card";
-import Boton from "../components/Button";
+import { useContext } from "react";
+import Context from "../contexts/Context";
 
-export default function Menu() {
+const Menu=() => {
+
+  const { menus} = useContext(Context);
+
+
   return (
     <>
       <header>
@@ -13,14 +18,15 @@ export default function Menu() {
       <div className="contenedor" style={{ display: "flex" }}>
         <Card />
         <div className="card-container">
-          {Data.map((post) => {
+          {menus.map((data) => {
             return (
-              <div className="divgurger" key={post.id}>
-                <img className="image" src={post.img} alt="" />
-                <h3>{post.name}</h3>
-                <p>${post.price}</p>
-                <Boton />
-              </div>
+              <button className="divgurger" key={data.id}>
+              
+                <img className="image" src={data.img} alt="" />
+                <h3>{data.name}</h3>
+                <p>${data.price}</p>
+                </button>
+              
             );
           })}
         </div>
@@ -28,3 +34,5 @@ export default function Menu() {
     </>
   );
 }
+
+export default Menu;

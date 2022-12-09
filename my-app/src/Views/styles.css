@@ -193,8 +193,8 @@ margin-top: 30%;
 
 .btnMenos {
   box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
-  height: 4vh;
-  width: 4vh;
+  height: 3vh;
+  width: 3vh;
 
   border-radius: 50%;
   margin-left: 30%;
@@ -205,8 +205,8 @@ margin-top: 30%;
 
 .btnMas {
   box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
-  height: 4vh;
-  width: 4vh;
+  height: 3vh;
+  width: 3vh;
 
   border-radius: 50%;
   margin-left: 30%;
@@ -229,7 +229,10 @@ margin-top: 30%;
 }
 
 .divCount {
-  display: block;
-  align-items: center;
-  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
 }
+
