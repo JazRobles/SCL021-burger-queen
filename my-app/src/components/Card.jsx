@@ -1,20 +1,31 @@
 import React from 'react'
 import '../Views/styles.css';
+import { useContext } from "react";
+import Context from "../contexts/Context";
 
-import Contador from "../components/Contador";
 const Card = () => {
+
+  const { menus} = useContext(Context);
+
+
 return (
     <>
 
 {/*<Link to={Card} className="btnLink">*/}
-    <div className="card">
+
+    <div className="card" key={menus}>
+    
+ 
          <h2>Pedido</h2>
        <textarea placeholder='Mesa y Extras' className='texArea'></textarea>
-         <div className='divCentro'>
+       
+       
          <button className='btnEliminar'>Eliminar</button>
-         <Contador/>
-         </div>
+       
+        
          <button className='btnCocinar'>Cocinar</button>
+  
+
     </div>
 
     {/*</Link>*/}

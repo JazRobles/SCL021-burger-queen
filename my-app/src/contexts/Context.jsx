@@ -8,7 +8,7 @@ const Context = createContext();
 
 const Provider = ({ children }) => {
   const [menus, setMenu] = useState([]);
- 
+
 
   //extrae la data de json mediante fetch y guarda informacion con useEffect
 
@@ -34,13 +34,10 @@ const Provider = ({ children }) => {
   }, []);
 
  
-
- 
-
   console.log(menus);
   return (
     <Context.Provider
-      value={{ menus}}
+      value={{ menus }}
     >
       {children}
     </Context.Provider>
@@ -51,5 +48,5 @@ const Provider = ({ children }) => {
 // Export Provider (permite que los componentes consuman los datos)
 export { Provider };
 
-// Export Context
+
 export default Context;
