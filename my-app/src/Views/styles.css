@@ -20,20 +20,10 @@ code {
   width: 100%;
   height: 50%;
 display: flow-root;
-  background-image: url("../../public/Assets/img/Fondog.png");
+  background-image: url("https://images.pexels.com/photos/2271106/pexels-photo-2271106.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   
   background-repeat: no-repeat;
   min-height: 100vh;
-}
-
-.logo {
-  box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
-  height: 17vh;
-  width: 17vh;
-
-  border-radius: 50%;
-  margin-left: 42%;
-  margin-top: 6%;
 }
 
 .titulo-enter{
@@ -51,7 +41,7 @@ justify-content:center;
 text-shadow: 2px 2px 4px #000000;
 }
 
-
+/* 
 .btnmesero {
   box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
   height: 8vh;
@@ -60,16 +50,165 @@ text-shadow: 2px 2px 4px #000000;
   margin-top: 6%;
   font-weight: 100;
   font-size: large;
-}
-
-.btncocina {
-  box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
+} */
+.btnmesero {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   height: 8vh;
   width: 26vh;
   margin-left: 40%;
   margin-top: 6%;
-  font-weight: 100;
   font-size: large;
+  background: #ff8C00;
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.6em;
+}
+
+
+.gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 0.6em;
+  margin-top: -0.25em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+.label {
+  position: relative;
+  top: -1px;
+}
+
+.transition {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 500ms;
+  background-color: #ff5500;
+  border-radius: 9999px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btnmesero:hover .transition {
+  width: 14em;
+  height: 14em;
+}
+
+.btnmesero:active {
+  transform: scale(0.97);
+}
+
+.btncocina {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  height: 8vh;
+  width: 26vh;
+  margin-left: 40%;
+  margin-top: 6%;
+  font-size: large;
+  padding: 1em 2.7em;
+  font-weight: 100;
+  background: #ff8C00;
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.6em;
+}
+
+.gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 0.6em;
+  margin-top: -0.25em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+.label {
+  position: relative;
+  top: -1px;
+}
+
+.transition {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 500ms;
+  background-color: #ff5500;
+  border-radius: 9999px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btncocina:hover .transition {
+  width: 14em;
+  height: 14em;
+}
+
+.btncocina:active {
+  transform: scale(0.97);
+}
+.btnCocinar {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 17px;
+  padding: 1em 2.7em;
+  font-weight: 500;
+  background: #ff8C00;
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.6em;
+  margin-top: 80%;
+}
+
+.gradients {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 0.6em;
+  margin-top: -0.25em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+.labels {
+  position: relative;
+  top: -1px;
+}
+
+.transitions {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 500ms;
+  background-color: #ff5500;
+  border-radius: 9999px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btncocinar:hover .transitions {
+  width: 14em;
+  height: 14em;
+}
+
+.btncocinar.btnCocinar {
+  transform: scale(0.97);
 }
 
 .div-btn {
@@ -81,7 +220,7 @@ text-shadow: 2px 2px 4px #000000;
 }
 
 .image {
-  display: block;
+  display: flex;
   align-items: center;
 
   top: 2%;
@@ -91,7 +230,32 @@ text-shadow: 2px 2px 4px #000000;
 
   border-radius: 50%;
 }
+.image-item{
+   display: flex;
+  align-items: center;
 
+
+
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+
+}
+.name-item {
+
+  text-align: left;
+  font-size: .875rem;
+  line-height: normal;
+  color: #333;
+}
+.price-item{
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 700;
+
+ 
+}
 .card-container{
   display:flex;
   flex-wrap:wrap;
@@ -100,17 +264,37 @@ text-shadow: 2px 2px 4px #000000;
 }
 
 .card {
-  box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
+  position: static;
+  box-sizing: border-box;
   display: flex;
-    height: 60vh;
-    width: 35vh;
-    border-radius: 8px;
-    margin-top: 0%;
-    background-color: aliceblue;
-    align-content: center;
+  
     align-items: center;
-   
-    flex-direction: column;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   align-content: stretch;
+    height: 44vh;
+    width: 38vh;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+ 
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+}
+
+.card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.99) rotateZ(0.0deg);
 }
 
 .texArea {
@@ -135,92 +319,75 @@ margin-top: 30%;
   border-radius: 8px;
 }
 
-.btnEliminar {
-  display: block;
-  align-items: center;
-
-  height: 3vh;
-  width: 10vh;
-  
-  box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
-  font-weight: 100;
-  font-size: large;
-  margin-left: 5%;
-}
-
-.btnCocinar {
-  display: flex;
-  top: 60%;
-  
-
-  height: 4vh;
-  width: 10vh;
- 
-  font-weight: 100;
-  font-size: large;
-  box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
-}
-
 .contenedor {
   float: left;
 }
 
+
 .divgurger {
-  box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
+  box-sizing: border-box;
+  width: 190px;
+  height: 254px;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+}
 
-  height: 30vh;
-  width: 25vh;
+.divgurger:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
 
-  border-radius: 8px;
+.divgurger:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.conteo{
+  color: #333;
  
-  margin-top: 1%;
-  background-color: aliceblue;
-}
-
-.h3papas {
-  display: block;
-  align-items: center;
-  position: absolute;
-  top: 47%;
-  margin-left: 20%;
-}
-.h3menu {
-  display: block;
-  align-items: center;
-  position: absolute;
-  top: 55%;
-  margin: -25px 0 0 -25px;
+  order: 1;
+  background-color: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-size: .875rem;
+  /* margin-right: 8px; */
 }
 
 .btnMenos {
-  box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
-  height: 3vh;
-  width: 3vh;
-
-  border-radius: 50%;
-  margin-left: 30%;
-  margin-top: 7%;
-  font-weight: 100;
-  font-size: large;
+  border: 0;
+  order: 0;
+  padding: 2px 6px;
+  border-radius: 8px;
 }
 
 .btnMas {
-  box-shadow: 0px 4px 4px 0px rgb(21, 24, 24);
-  height: 3vh;
-  width: 3vh;
-
-  border-radius: 50%;
-  margin-left: 30%;
-  margin-top: 6%;
-  font-weight: 100;
-  font-size: large;
+  border: 0;
+  order: 2;
+  padding: 2px 6px;
+  border-radius: 8px;
 }
 
 .tituloMenu {
+  display: flex;
+  align-items: center;
   font-weight: 100;
-  font-size: xx-large;
-  margin-left: 50%;
-  margin-top: 5%;
+  font-size: 40px;
+  margin-left: 40%;
+  margin-top: 4%;
   color: rgb(243, 141, 9);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-style: italic;
@@ -230,11 +397,65 @@ margin-top: 30%;
 }
 
 .divCount {
-  display: grid;
-justify-items: center;
-justify-content: center;
-top:2% ;
-justify-content: space-between;
-align-items: baseline;
+ 
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
+.Card-Products:after {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  content: "";
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.Card-Products{
+  position: relative;
+  
+    display: flex;
+   
+    align-items: flex-start;
+
+  
+    justify-content: flex-start;
+    padding: 16px 0;
+    flex-wrap: wrap
+}
+
+.div-items{
+ 
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.div-namePrice{
+ 
+  display: flex;
+  flex-direction: column;
+
+  flex-direction: row;
+
+}
+
+.contener-btons{
+
+  display: flex;
+justify-content: space-between;
+
+/* top:20px; */
+
+
+}
+.conteiner-enter{
+  display: flex;
+  flex-direction: column;
+position: relative;
+}
+
+.contenedor-btns{
+ right: 3px;
+}

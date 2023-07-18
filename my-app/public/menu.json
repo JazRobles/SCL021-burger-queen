@@ -2,49 +2,49 @@
   {
       
       "id": "1",
-      "img": "/Assets/img/burgerxx.png",
+      "img": "https://images.pexels.com/photos/2983098/pexels-photo-2983098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "name": "Hamburguesa doble",
       "price": 5000
     },
     {
      
       "id": "2",
-      "img": "/Assets/img/burger.png",
+      "img": "https://images.pexels.com/photos/918581/pexels-photo-918581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "name": "Hamburguesa sencilla",
       "price": 4000
     },
     {
       
       "id": "3",
-      "img": "/Assets/img/papas.png",
+      "img": "https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "name": "Papas fritas",
       "price": 3000
     },
     {
       
       "id": "4",
-      "img": "/Assets/img/agua.png",
+      "img": "https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "name": "Agua 500ml",
       "price": 1500
     },
     {
       
       "id": "5",
-      "img": "/Assets/img/agua.png",
+      "img": "https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "name": "Agua 750ml",
       "price": 2000
     },
     {
       
-        "id": "5",
-        "img": "/Assets/img/bebida.png",
+        "id": "6",
+        "img": "https://images.pexels.com/photos/50593/coca-cola-cold-drink-soft-drink-coke-50593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "name": "Bebida/gaseosa 750ml",
         "price": 2000
       },
     {
      
-      "id": "6",
-      "img": "/Assets/img/bebida.png",
+      "id": "7",
+      "img": "https://images.pexels.com/photos/50593/coca-cola-cold-drink-soft-drink-coke-50593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "name": "Bebida/gaseosa 500ml",
       "price": 1500
     }

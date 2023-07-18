@@ -1,16 +1,10 @@
-import { createContext, useState, useEffect } from "react";
-
-//se crea context para reutilizar la info del json y funcionalidades en varios componentes
+import React, { createContext, useState, useEffect } from "react";
 
 const Context = createContext();
 
-// se guarda info en el hook useState
-
 const Provider = ({ children }) => {
   const [menus, setMenu] = useState([]);
-
-
-  //extrae la data de json mediante fetch y guarda informacion con useEffect
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     const getMenu = async () => {
@@ -19,34 +13,63 @@ const Provider = ({ children }) => {
         const menus = await res.json();
         if (menus) {
           setMenu(menus);
-        }
-        //manejo de errores
-        else {
+        } else {
           throw new Error("Something went wrong");
         }
       } catch (error) {
-        // console.log("error en la solicitud", error)
-       
+        console.log("error en la solicitud", error);
       }
     };
 
     getMenu();
   }, []);
 
- 
-  console.log(menus);
+  const addToCart = (item) => {
+    const { img, name, price } = item;
+    const newItem = { id: cartItems.length + 1, img, name, price, quantity: 1 };
+    setCartItems([...cartItems, newItem]);
+  };
+
+  const incrementQuantity = (itemId) => {
+    const updatedCartItems = cartItems.map((item) => {
+      if (item.id === itemId) {
+        return { ...item, quantity: item.quantity + 1 };
+      }
+      return item;
+    });
+    setCartItems(updatedCartItems);
+  };
+
+  const decrementQuantity = (itemId) => {
+    const updatedCartItems = cartItems.map((item) => {
+      if (item.id === itemId && item.quantity > 0) {
+        return { ...item, quantity: item.quantity - 1 };
+      }
+      return item;
+    });
+    setCartItems(updatedCartItems);
+  };
+
+  const removeItem = (itemId) => {
+    const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
+    setCartItems(updatedCartItems);
+  };
+
   return (
     <Context.Provider
-      value={{ menus }}
+      value={{
+        menus,
+        cartItems,
+        addToCart,
+        incrementQuantity,
+        decrementQuantity,
+        removeItem,
+      }}
     >
       {children}
     </Context.Provider>
   );
-  
 };
 
-// Export Provider (permite que los componentes consuman los datos)
 export { Provider };
-
-
 export default Context;

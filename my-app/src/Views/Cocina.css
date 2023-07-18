@@ -1,0 +1,127 @@
+.div-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .order-details {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 400px;
+  }
+  
+  .order-details h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .order-details table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .order-details table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .order-details table td {
+    padding: 5px;
+  }
+  
+  .order-details table td:first-child {
+    font-weight: bold;
+  }
+  
+  .order-details table td:last-child {
+    text-align: right;
+  }
+  
+  .flecha {
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 40px;
+    color:  rgb(243, 141, 9);
+  }
+
+  .div-class {
+    background-color: #f8f8f8;
+    border: 42px solid #ddd;
+    padding: 62px;
+    margin-bottom: 300px;
+   
+
+  }
+
+  .div-class {
+    box-sizing: border-box;
+    width: 393px;
+    height: 109px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+  }
+  
+  .div-class:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+  }
+  
+  .div-class:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+
+  
+  .letra-detalle{
+    color:white;
+    display: flex;
+    justify-content: center;
+
+  }
+  .order-div {
+    margin-bottom: 10px;
+  }
+  
+  .order-div h6 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .order-div table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .order-div table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .order-div table td {
+    padding: 5px;
+  }
+  
+  .order-div table td:first-child {
+    font-weight: bold;
+  }
+  
+  .order-div table td:last-child {
+    text-align: right;
+  }
+  
+  

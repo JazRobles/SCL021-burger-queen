@@ -1,39 +1,34 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./styles.css";
-import Card from "../components/Card";
-import { useContext } from "react";
 import Context from "../contexts/Context";
-import Contador from "../components/Contador";
+import Add from "../components/Ad";
+import NavBar from "../components/NavBar";
 
-const Menu=() => {
-
-  const { menus} = useContext(Context);
-
+const Menu = () => {
+  const { menus, addToCart } = useContext(Context);
 
   return (
     <>
       <header>
-        <h1 className="tituloMenu">Menu</h1>
+        <NavBar />
+        <h1 className="tituloMenu">Menú</h1>
       </header>
       <div className="contenedor" style={{ display: "flex" }}>
-        <Card key={menus}/>
         <div className="card-container">
           {menus.map((data) => {
             return (
-              <button className="divgurger" key={data.id} onClick={(data).Card}>
-              
+              <div className="divgurger" key={data.id}>
                 <img className="image" src={data.img} alt="" />
                 <h3>{data.name}</h3>
                 <p>${data.price}</p>
-                <Contador/>
-                </button>
-              
+                <Add item={data} onClick={() => addToCart(data)} />
+              </div>
             );
           })}
         </div>
       </div>
     </>
   );
-}
+};
 
 export default Menu;
